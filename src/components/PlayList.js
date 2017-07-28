@@ -3,17 +3,18 @@
 import React from 'react';
 import PlayListItem from './PlayListItem.js'
 
-export default class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+export default class PlayList extends React.Component {
 
-  render() {
-    return (
-      <div>MyComponent</div>
-    );
-  }
-}
+
+  componentDidMount() {
+  fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
+        return results.json();
+      }).then(data => {
+        this.setState({songs: data});
+        console.log("state", this.state.songs);
+      })
+
+  
 
 fetchData = (e) => {
     e.preventDefault();

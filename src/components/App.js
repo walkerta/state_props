@@ -23,39 +23,6 @@ class App extends Component {
   }
 }
 
-class NavBar extends Component {
-  render() {
-    return (
-      <nav className="Navbar">
-
-      </nav>
-    );
-  }
-}
-
-class PlayListForm extends Component {
-  render() {
-    return (
-      <div className="PlayListForm">
-
-      </div>
-    );
-  }
-}
-
-class PlayList extends Component {
-  render() {
-    return (
-      <div className="PlayList">
-
-      </div>
-    );
-  }
-}
-
-
-export default App;
-
 
 class Greeting extends React.Component {
   render(   ) {
@@ -75,8 +42,5 @@ constructor(props) {
   }
 }
 
-
-
-c
 
 export default App;
