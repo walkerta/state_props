@@ -1,12 +1,10 @@
-
-
 import React from 'react';
 import PlayListItem from './PlayListItem.js'
 
 export default class PlayList extends React.Component {
 
 
-  componentDidMount() {
+componentDidMount() {
   fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
         return results.json();
       }).then(data => {
@@ -14,7 +12,7 @@ export default class PlayList extends React.Component {
         console.log("state", this.state.songs);
       })
 
-  
+
 
 fetchData = (e) => {
     e.preventDefault();
@@ -34,10 +32,3 @@ fetchData = (e) => {
   //******************************************************************************
   //******************************************************************************
   //copy and paste into componentDidMount in your PlayList component.
-  componentDidMount() {
-  fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
-        return results.json();
-      }).then(data => {
-        this.setState({songs: data});
-        console.log("state", this.state.songs);
-      })
