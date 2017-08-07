@@ -6,30 +6,40 @@ export default class PlayListForm extends React.Component {
     this.setState({userName: '', songNotes: '', songArtist: '', songTitle: ''});
   }
 
-}
 
-render() {
-  return (
 
-    <form onSubmit={this.handleSubmit}>
-      <label>
-        User Name:
-        <input onChange={this.handleNameChange} name="name" type="text" value=Name>
-          <br>
-            <label>
-              Artist Band:
-              <input onChange={this.handleNameChange} name="name" type="text" value=Artist>
 
-                <br>
+      render() {
+          return (
+
+            <div>
+              <div className="container"/>
+                <button onSubmit={this.handleSubmit}>Updated</button>
+
+              <br></br>
+
+              <label>
+                User Name:
+                <input onChange={this.handleNameChange} name="name" placeholder="Name or User Name"/>
+              </label>
+
+                <label>
+                  Artist Band:
+                  <input onChange={this.handleNameChange} name="name" placeholder="Artist Band"/>
+                </label>
+
                   <label>
                     Song Title:
-                    <input onChange={this.handleNameChange} name="name" type="text" value=Song Title>
+                    <input onChange={this.handleNameChange} name="name" placeholder="Song Title"/>
+                  </label>
 
-                      <br>
-                        <label>
-                          Notes About Song:
-                          <input onChange={this.handleNameChange} name="name" type="text" value=>
-
-                            <br>
-                              <input type="submit" value="Submit"/>
-                              <br>
+                    <label>
+                      Notes about Song:
+                      <input onChange={this.handleNameChange} name="name" placeholder=""/>
+                    </label>
+                    <br></br>
+                  
+            </div>
+          )
+        }
+      }

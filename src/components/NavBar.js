@@ -11,8 +11,9 @@ export default class NavBar extends React.Component {
   render() {
     return (
 
-
-      <div className="navbar">
+      <header className="navbar">
+        <h1>Play What?!</h1>
+        </header>
     );
   }
 }
